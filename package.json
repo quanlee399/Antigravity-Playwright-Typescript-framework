@@ -1,0 +1,20 @@
+{
+  "name": "antigravity-testing-kit",
+  "version": "1.0.0",
+  "description": "VizHIS Emergency Room Test Automation Suite",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "clean:reports": "node -e \"['allure-results', 'allure-report', 'playwright-report', 'test-results'].forEach(d => require('fs').rmSync(d, {recursive: true, force: true}))\"",
+    "test:allure": "npm run clean:reports && playwright test",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "allure-commandline": "^2.42.0",
+    "allure-playwright": "^3.9.0",
+    "typescript": "^5.0.0"
+  }
+}

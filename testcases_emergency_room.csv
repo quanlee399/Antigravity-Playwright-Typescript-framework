@@ -1,0 +1,127 @@
+﻿TC ID,Module,Risk Level,Test Scenario,Pre-Condition,Test Steps,Test Data,Expected Result,Priority
+VIZHIS_ER_TC_001,ER Status Board,Medium,Kiểm tra tính hiển thị và chuyển đổi tab danh sách bệnh nhân,Người dùng đăng nhập hệ thống thành công và chọn vị trí Ho Chi Minh,"1. Quan sát số lượng bệnh nhân hiển thị trên các tab ở đầu trang Status Board.
+2. Nhấp chuột vào tab Intake.
+3. Nhấp chuột vào tab Receiving Care.
+4. Nhấp chuột vào tab Ready For Disposition.
+5. Nhấp chuột vào tab My Patients.",Không có,"1. Hệ thống hiển thị đúng số lượng bệnh nhân đi kèm trên mỗi tab (ví dụ: All 1913, Intake 206...).
+2. Khi nhấp vào mỗi tab, danh sách bệnh nhân được tải và hiển thị chính xác theo đúng trạng thái của tab đó.",High
+VIZHIS_ER_TC_002,ER Status Board,Medium,Kiểm tra hiển thị thông tin cơ bản trên thẻ bệnh nhân,Người dùng đang ở màn hình ER Status Board và có danh sách bệnh nhân hiển thị,"1. Quan sát thẻ bệnh nhân đầu tiên trong danh sách.
+2. Đối chiếu các trường thông tin hành chính hiển thị trên thẻ.",Hồ sơ bệnh nhân: Sinh S. Sinh,"Hệ thống hiển thị đầy đủ và chính xác các thông tin:
+- Họ và tên bệnh nhân: Sinh S. Sinh
+- Chỉ số ESI hiện tại: ESI-2
+- Trạng thái xử lý: Disposition: In-progress
+- Mã MRN: 0000052725
+- Ngày sinh (DOB): 03/01/2026
+- Tuổi (Age): Unknown
+- Giới tính (Sex): Male
+- Ngày giờ đến khoa cấp cứu (Arrival): 06/02/2026 at 12:00 AM",High
+VIZHIS_ER_TC_003,ER Status Board,Medium,Kiểm tra hiển thị chỉ số sinh tồn và số lượng cận lâm sàng trên thẻ bệnh nhân,Người dùng đang ở màn hình ER Status Board và có danh sách bệnh nhân hiển thị,"1. Quan sát thẻ bệnh nhân Sinh S. Sinh.
+2. Kiểm tra phần hiển thị chỉ số sinh tồn (Vitals).
+3. Kiểm tra số lượng chỉ định cận lâm sàng hiển thị bên cạnh các nhãn LAB, RAD, PROC, MEDS, OTH, CMTS.",Bệnh nhân: Sinh S. Sinh,"1. Hệ thống hiển thị đúng các chỉ số sinh tồn (ví dụ: Temp, HR, SpO2, RR, BP, Pain Scale). Nếu chưa đo thì hiển thị dấu gạch ngang (-).
+2. Hệ thống hiển thị đúng số lượng chỉ định đang hoạt động của từng loại dịch vụ cận lâm sàng (ví dụ: LAB 0, RAD 0, PROC 0...).",Medium
+VIZHIS_ER_TC_004,ER Status Board,Medium,Kiểm tra chức năng chuyển tiếp Process Intake từ thẻ bệnh nhân,Người dùng đang ở màn hình ER Status Board và có bệnh nhân cần tiếp nhận ở tab Intake,"1. Tìm thẻ bệnh nhân Sinh S. Sinh ở tab Intake.
+2. Nhấp chuột vào nút Process Intake ở chân thẻ bệnh nhân.",Bệnh nhân: Sinh S. Sinh,"Hệ thống chuyển hướng người dùng thành công sang giao diện thực hiện tiếp nhận lâm sàng (Intake/Triage) của bệnh nhân Sinh S. Sinh.",High
+VIZHIS_ER_TC_005,ER Status Board,Medium,Kiểm tra chức năng mở bệnh án Start Encounter từ thẻ bệnh nhân,Người dùng đang ở màn hình ER Status Board,"1. Tìm thẻ bệnh nhân Sinh S. Sinh có nút Start Encounter ở chân thẻ.
+2. Nhấp chuột vào nút Start Encounter.",Bệnh nhân: Sinh S. Sinh,"Hệ thống mở thành công giao diện bệnh án khám bệnh cấp cứu (Encounter) của bệnh nhân Sinh S. Sinh để bác sĩ tiến hành thăm khám.",High
+VIZHIS_ER_TC_006,ER Status Board,Medium,Kiểm tra tìm kiếm nhanh bệnh nhân theo Tên trên Status Board,Người dùng đang ở màn hình ER Status Board,"1. Nhấp chuột vào ô tìm kiếm Search by Patient name or MRN.
+2. Nhập họ tên đầy đủ của bệnh nhân.
+3. Quan sát danh sách kết quả hiển thị.",Nhập tên tìm kiếm: Sinh S. Sinh,"Hệ thống thực hiện lọc tức thì và chỉ hiển thị các bệnh nhân có tên khớp với từ khóa Sinh S. Sinh.",High
+VIZHIS_ER_TC_007,ER Status Board,Medium,Kiểm tra tìm kiếm nhanh bệnh nhân theo mã MRN trên Status Board,Người dùng đang ở màn hình ER Status Board,"1. Nhấp chuột vào ô tìm kiếm Search by Patient name or MRN.
+2. Nhập mã MRN của bệnh nhân.
+3. Quan sát danh sách kết quả hiển thị.",Nhập mã MRN: 0000052725,"Hệ thống thực hiện lọc tức thì và chỉ hiển thị bệnh nhân có mã MRN chính xác là 0000052725.",High
+VIZHIS_ER_TC_008,Filters,Medium,Kiểm tra lọc danh sách bệnh nhân theo ESI Level,Người dùng đang ở màn hình ER Status Board,"1. Nhấp chuột vào nút Filters để mở bảng bộ lọc.
+2. Tại trường ESI Level, nhấp mở dropdown và tích chọn ESI-2.
+3. Nhấp nút Apply.",Bộ lọc ESI Level: ESI-2,"Hệ thống đóng panel bộ lọc và hiển thị danh sách các bệnh nhân có chỉ số ESI là ESI-2 trên Status Board.",Medium
+VIZHIS_ER_TC_009,Filters,Medium,Kiểm tra lọc danh sách bệnh nhân theo Y tá phụ trách,Người dùng đang ở màn hình ER Status Board,"1. Nhấp chuột vào nút Filters để mở bảng bộ lọc.
+2. Tại trường Assigned Nurse, nhấp mở dropdown và chọn y tá.
+3. Nhấp nút Apply.",Chọn y tá: Kha K. Truy,"Hệ thống đóng panel bộ lọc và hiển thị danh sách các bệnh nhân đang được phân công cho y tá Kha K. Truy phụ trách.",Medium
+VIZHIS_ER_TC_010,Filters,Medium,Kiểm tra lọc kết hợp nhiều tiêu chí trong panel Filters,Người dùng đang ở màn hình ER Status Board,"1. Nhấp chuột vào nút Filters để mở bảng bộ lọc.
+2. Chọn ESI Level là ESI-1.
+3. Tích chọn checkbox Critical Patients.
+4. Tại mục Patient status, chọn Intake: Waiting.
+5. Nhấp nút Apply.",ESI Level: ESI-1, Critical Patients: Checked, Patient Status: Intake: Waiting,"Hệ thống hiển thị chính xác các bệnh nhân thỏa mãn đồng thời tất cả các điều kiện: ESI mức 1, là bệnh nhân nguy kịch và đang chờ xử lý bước tiếp nhận.",High
+VIZHIS_ER_TC_011,Filters,Medium,Kiểm tra chức năng Clear All để khôi phục bộ lọc về mặc định,Người dùng đang ở màn hình ER Status Board và đang áp dụng các bộ lọc,"1. Nhấp chuột vào nút Filters để mở bảng bộ lọc.
+2. Quan sát các bộ lọc đang được tích chọn.
+3. Nhấp vào nút Clear All ở chân panel bộ lọc.
+4. Nhấp nút Apply.",Khôi phục bộ lọc mặc định,"Hệ thống xóa bỏ tất cả các tiêu chí lọc đã chọn trước đó, khôi phục các giá trị bộ lọc về mặc định và hiển thị lại toàn bộ danh sách bệnh nhân không bị lọc.",Medium
+VIZHIS_ER_TC_012,Create ER Record,Low,Kiểm tra tìm kiếm bệnh nhân cũ bằng tìm nhanh khi tạo hồ sơ ER,Người dùng ở màn hình ER Status Board,"1. Nhấp nút Create ER Record để vào màn hình tìm bệnh nhân.
+2. Nhập mã MRN vào trường Search by Patient name or MRN.
+3. Quan sát kết quả hiển thị bên dưới.",Nhập mã MRN: 0000052725,"Hệ thống hiển thị đúng thông tin bệnh nhân có mã MRN là 0000052725 từ cơ sở dữ liệu hệ thống.",Medium
+VIZHIS_ER_TC_013,Create ER Record,Low,Kiểm tra tìm kiếm nâng cao (Advanced Search) bệnh nhân cũ khi tạo hồ sơ ER,Người dùng ở màn hình tạo hồ sơ ER,"1. Nhấp chuột vào nút Advanced Search để mở rộng form tìm kiếm.
+2. Nhập First Name của bệnh nhân.
+3. Chọn Birth Sex từ dropdown.
+4. Nhập Date of Birth.
+5. Nhấp nút tìm kiếm.",First Name: Sinh, Birth Sex: Male, DOB: 03/01/2026,"Hệ thống hiển thị danh sách các bệnh nhân cũ thỏa mãn chính xác các điều kiện tìm kiếm nâng cao đã nhập.",Medium
+VIZHIS_ER_TC_014,Create ER Record,Low,Kiểm tra chức năng liên kết hồ sơ bệnh nhân cũ đã tìm thấy,Người dùng ở màn hình tạo hồ sơ ER và đã tìm thấy bệnh nhân cũ phù hợp,"1. Nhấp chọn vào bệnh nhân Sinh S. Sinh trong danh sách kết quả tìm kiếm.
+2. Nhấp chuột vào nút Select ở chân trang.",Bệnh nhân được chọn: Sinh S. Sinh,"Hệ thống thực hiện liên kết thông tin bệnh nhân cũ vào hồ sơ cấp cứu mới thành công và chuyển sang bước xử lý tiếp theo.",High
+VIZHIS_ER_TC_015,Add New Patient,High,Kiểm tra đăng ký bệnh nhân mới thành công ở chế độ Quick Mode,Người dùng đang ở màn hình Create ER Record,"1. Nhấp nút Add New Patient để mở form đăng ký mới.
+2. Đảm bảo checkbox Add Patient using Quick Mode được tích chọn.
+3. Nhập đầy đủ các trường thông tin bắt buộc: Patient Type, First Name, Birth Sex, Date of Birth, Care Group, ID Type, ID No, Phone Type, Phone Number, Contact Email.
+4. Nhập địa chỉ mặc định trong Contact Info.
+5. Nhấp nút Next ở chân trang.",Patient Type: Emergency, First Name: Nguyen, Last Name: A, Birth Sex: Male, DOB: 10/24/1995, Care Group: Adult, ID Type: Passport, ID No: PP998877, Phone Type: Mobile, Phone Number: 912345678, Contact Email: nguyena@mail.com, Barangay: Barangay 1, City: Ho Chi Minh, Country: Philippines,"Hệ thống lưu thông tin hành chính bệnh nhân thành công, tạo mã MRN mới cho bệnh nhân và chuyển tiếp thành công sang màn hình Intake/Triage để tiếp nhận bệnh án.",Critical
+VIZHIS_ER_TC_016,Add New Patient,High,Kiểm tra đăng ký bệnh nhân mới thành công ở chế độ Full Mode,Người dùng đang ở màn hình Create ER Record,"1. Nhấp nút Add New Patient để mở form đăng ký mới.
+2. Bỏ tích chọn checkbox Add Patient using Quick Mode để hiển thị Full Mode.
+3. Nhập đầy đủ thông tin tại phần Demographics (bao gồm cả các trường nâng cao nhưPreferred Language, Nationality).
+4. Nhập phần Patient IDs và Contact Info.
+5. Nhập phần Employment (Employer, Employment Status, Occupation, Work Phone).
+6. Nhấp nút Add Related Person và nhập thông tin người liên hệ khẩn cấp.
+7. Nhấp nút Add Coverage và nhập thông tin bảo hiểm y tế.
+8. Nhấp nút Add Guarantor và nhập thông tin người bảo lãnh thanh toán.
+9. Nhấp nút Next.",Demographics: Patient Type: Emergency, First Name: Tran, Last Name: B, Birth Sex: Female, DOB: 05/12/1990, Nationality: Filipino, Language: English. IDs: National ID: NID-123456. Contact: Mobile: 987654321, Email: tranb@mail.com. Employment: Employer: DataHouse, Status: Employed. Related Person: Nguyen Van C (Brother). Coverage: PhilHealth. Guarantor: Self. Address: Barangay 2, Pasay City, Philippines.,"Hệ thống lưu trữ toàn bộ thông tin đầy đủ của bệnh nhân mới thành công, liên kết bảo hiểm, người bảo lãnh và chuyển sang giao diện tiếp nhận bệnh án cấp cứu.",High
+VIZHIS_ER_TC_017,Add New Patient,High,Kiểm tra tải lên ảnh bệnh nhân thành công với định dạng và kích thước hợp lệ,Người dùng đang ở form Add New Patient ở chế độ Full Mode,"1. Di chuyển tới khu vực tải ảnh bệnh nhân trong phần Demographics.
+2. Nhấp nút Choose File.
+3. Chọn một file ảnh từ máy tính.
+4. Nhấp nút Upload Photo.",Tên file: patient_avatar.png, Định dạng: PNG, Dung lượng: 2.5MB,"Ảnh bệnh nhân được tải lên hệ thống thành công và hiển thị bản xem trước (preview) của ảnh trên giao diện.",Medium
+VIZHIS_ER_TC_018,Add New Patient,High,Kiểm tra tải lên ảnh bệnh nhân thất bại do sai định dạng file,Người dùng đang ở form Add New Patient ở chế độ Full Mode,"1. Di chuyển tới khu vực tải ảnh bệnh nhân.
+2. Nhấp nút Choose File.
+3. Chọn một file không phải là ảnh.
+4. Nhấp nút Upload Photo.",Tên file: medical_record.pdf, Định dạng: PDF, Dung lượng: 1.0MB,"Hệ thống hiển thị thông báo lỗi: Định dạng file không hợp lệ. Chỉ chấp nhận các file ảnh JPG, JPEG, PNG hoặc SVG.",High
+VIZHIS_ER_TC_019,Add New Patient,High,Kiểm tra tải lên ảnh bệnh nhân thất bại do dung lượng file vượt quá giới hạn,Người dùng đang ở form Add New Patient ở chế độ Full Mode,"1. Di chuyển tới khu vực tải ảnh bệnh nhân.
+2. Nhấp nút Choose File.
+3. Chọn một file ảnh có dung lượng lớn hơn 8MB.
+4. Nhấp nút Upload Photo.",Tên file: heavy_image.jpg, Định dạng: JPG, Dung lượng: 10.5MB,"Hệ thống hiển thị thông báo lỗi: Kích thước file vượt quá giới hạn cho phép. Vui lòng tải lên file ảnh có dung lượng tối đa 8MB.",High
+VIZHIS_ER_TC_020,Add New Patient,High,Kiểm tra Validation khi bỏ trống trường bắt buộc First Name,Người dùng đang điền thông tin đăng ký bệnh nhân mới,"1. Nhập đầy đủ thông tin hợp lệ cho tất cả các trường.
+2. Để trống trường First Name.
+3. Nhấp nút Next.",Để trống First Name, các trường khác nhập đúng theo TC_015,"Hệ thống ngăn không cho chuyển trang, hiển thị thông báo lỗi cảnh báo màu đỏ ngay dưới trường First Name: First Name is required.",High
+VIZHIS_ER_TC_021,Add New Patient,High,Kiểm tra Validation khi nhập sai định dạng ngày sinh Date of Birth,Người dùng đang điền thông tin đăng ký bệnh nhân mới,"1. Nhập đầy đủ thông tin hợp lệ.
+2. Tại trường Date of Birth, nhập một ngày không tồn tại trong lịch thực tế.
+3. Nhấp chuột ra ngoài hoặc nhấp Next.",Date of Birth: 02/30/2026 (ngày 30 tháng 2),"Hệ thống báo lỗi định dạng ngày sinh không hợp lệ, yêu cầu nhập đúng định dạng MM/DD/YYYY hoặc chọn từ lịch.",High
+VIZHIS_ER_TC_022,Add New Patient,High,Kiểm tra Validation khi nhập sai định dạng email liên hệ,Người dùng đang điền thông tin đăng ký bệnh nhân mới,"1. Tại trường Contact Email, nhập một chuỗi ký tự không đúng cấu trúc email.
+2. Nhấp chuột ra ngoài hoặc nhấp Next.",Contact Email: nguyenamail.com (thiếu ký tự @),"Hệ thống hiển thị thông báo lỗi bên dưới trường nhập: Invalid email format.",High
+VIZHIS_ER_TC_023,Add New Patient,High,Kiểm tra Validation khi nhập số điện thoại chứa ký tự chữ cái,Người dùng đang điền thông tin đăng ký bệnh nhân mới,"1. Tại trường Phone Number, nhập chuỗi chứa cả số và chữ cái.
+2. Nhấp chuột ra ngoài hoặc nhấp Next.",Phone Number: 9123abc456,"Hệ thống báo lỗi nhập liệu hoặc tự động ngăn chặn không cho nhập ký tự chữ cái vào trường số điện thoại.",High
+VIZHIS_ER_TC_024,Add New Patient,High,Kiểm tra đăng ký bệnh nhân mới khi tích chọn N/A cho trường tên đệm và họ,Người dùng đang điền thông tin đăng ký bệnh nhân mới,"1. Điền First Name.
+2. Tích chọn checkbox N/A bên cạnh trường Middle Name.
+3. Tích chọn checkbox N/A bên cạnh trường Last Name.
+4. Điền đầy đủ các thông tin bắt buộc khác.
+5. Nhấp nút Next.",Middle Name: N/A (Checked), Last Name: N/A (Checked), First Name: Sinh,"Hệ thống cho phép bỏ trống hai trường Middle Name và Last Name mà không hiển thị thông báo lỗi bắt buộc, cho phép đăng ký thành công chỉ với First Name.",Medium
+VIZHIS_ER_TC_025,Add New Patient,High,Kiểm tra đăng ký bệnh nhân mới khi tích chọn Unknown cho trường ngày sinh,Người dùng đang điền thông tin đăng ký bệnh nhân mới,"1. Điền đầy đủ thông tin bắt buộc.
+2. Tích chọn checkbox Unknown bên cạnh trường Date of Birth.
+3. Nhấp nút Next.",Date of Birth: Unknown (Checked),"Hệ thống cho phép bỏ trống trường Date of Birth, tự động khóa trường DOB và đặt giá trị trường Age là Unknown, cho phép hoàn thành đăng ký thành công.",Medium
+VIZHIS_ER_TC_026,Add New Patient,High,Kiểm tra tính năng tự động tính toán số tuổi của bệnh nhân dựa trên ngày sinh,Người dùng đang điền thông tin đăng ký bệnh nhân mới,"1. Nhấp chọn hoặc nhập ngày sinh vào trường Date of Birth.
+2. Di chuyển con trỏ chuột ra ngoài để trường này mất focus.
+3. Quan sát giá trị tự động hiển thị tại trường Age.",Date of Birth: 06/01/2001 (Tính đến thời điểm hiện tại năm 2026 là tròn 25 tuổi),"Trường Age tự động cập nhật hiển thị chính xác số tuổi của bệnh nhân là: 25 Years và trường này ở trạng thái khóa (disabled) không cho nhập trực tiếp.",Medium
+VIZHIS_ER_TC_027,Add New Patient,High,Kiểm tra tính phụ thuộc dữ liệu địa lý của biểu mẫu địa chỉ bệnh nhân,Người dùng đang điền phần địa chỉ trong Contact Info,"1. Nhấp mở combobox Region và chọn một vùng cụ thể.
+2. Nhấp mở combobox Province và kiểm tra danh sách các tỉnh hiển thị.",Region được chọn: Region VIII (Eastern Visayas),"Hệ thống hiển thị danh sách Province bao gồm các tỉnh trực thuộc Region VIII (như Leyte, Southern Leyte, Biliran, Samar...) và không hiển thị tỉnh của vùng khác.",Medium
+VIZHIS_ER_TC_028,Workflow Rules,High,Kiểm tra chức năng cập nhật nhanh ESI Level trực tiếp trên Status Board,Người dùng đang ở màn hình ER Status Board,"1. Tìm thẻ bệnh nhân Sinh S. Sinh (hiện tại là ESI-2).
+2. Nhấp chuột vào nút edit ESI-2.
+3. Tại menu dropdown xuất hiện, nhấp chọn ESI-3.
+4. Quan sát sự thay đổi trên thẻ bệnh nhân.",Bệnh nhân: Sinh S. Sinh, Chọn mức ESI mới: ESI-3,"Hệ thống thực hiện cập nhật ngay lập tức chỉ số ESI của bệnh nhân thành ESI-3 trên thẻ, hiển thị thông báo Toast cập nhật thành công.",High
+VIZHIS_ER_TC_029,Workflow Rules,High,Kiểm tra phân công bác sĩ điều trị chính và y tá phụ trách cho bệnh nhân,Người dùng đang ở màn hình ER Status Board,"1. Tìm thẻ bệnh nhân Sinh S. Sinh.
+2. Nhấp mở combobox Attending Physician và chọn tên bác sĩ.
+3. Nhấp mở combobox Nurse và chọn tên y tá.
+4. Quan sát thông báo của hệ thống.",Bác sĩ được chọn: Tran Van B, Y tá được chọn: Kha K. Truy,"Hệ thống cập nhật thông tin bác sĩ điều trị và y tá phụ trách thành công cho bệnh nhân Sinh S. Sinh, hiển thị thông báo cập nhật thành công.",High
+VIZHIS_ER_TC_030,Workflow Rules,High,Kiểm tra quy tắc tự động khóa Next Step khi trạng thái là Disposition In-progress,Người dùng đang ở màn hình ER Status Board,"1. Tìm thẻ bệnh nhân Nhie T. Nhie, sr có trạng thái xử lý hiển thị là Disposition: In-progress.
+2. Quan sát trạng thái của combobox Next Step của bệnh nhân này.
+3. Thử nhấp chuột vào combobox Next Step để thay đổi.",Bệnh nhân: Nhie T. Nhie, sr (Trạng thái: Disposition: In-progress),"1. Trường Next Step hiển thị giá trị mặc định là Disposition và ở trạng thái bị khóa (disabled).
+2. Người dùng không thể nhấp chọn hoặc thay đổi giá trị của trường này.",High
+VIZHIS_ER_TC_031,Workflow Rules,High,Kiểm tra cho phép cập nhật Next Step đối với bệnh nhân ở trạng thái khác Disposition,Người dùng đang ở màn hình ER Status Board,"1. Tìm thẻ bệnh nhân Nhiiu O. Nhi có trạng thái xử lý là Physician: In-progress.
+2. Quan sát trạng thái combobox Next Step của bệnh nhân này.
+3. Nhấp mở combobox Next Step, chọn giá trị khác.",Bệnh nhân: Nhiiu O. Nhi, Mức chọn mới: Physician,"1. Trường Next Step ở trạng thái hoạt động (enabled).
+2. Người dùng chọn thành công giá trị Physician từ dropdown, hệ thống lưu cập nhật thành công.",High
+VIZHIS_ER_TC_032,Workflow Rules,High,Kiểm tra luồng hủy bỏ biểu mẫu đăng ký bệnh nhân mới nhưng giữ lại dữ liệu,Người dùng đang điền thông tin đăng ký bệnh nhân mới và đã nhập thông tin thay đổi,"1. Nhấp chuột vào nút Cancel ở chân trang.
+2. Hệ thống hiển thị Dialog cảnh báo Warning Cancel close.
+3. Nhấp chuột vào nút Cancel trên Dialog cảnh báo.",Thông tin đã nhập: First Name: Sinh, DOB: 03/01/2026,"Dialog cảnh báo đóng lại, người dùng tiếp tục ở lại biểu mẫu đăng ký bệnh nhân mới, toàn bộ dữ liệu đã điền được giữ nguyên.",Medium
+VIZHIS_ER_TC_033,Workflow Rules,High,Kiểm tra luồng hủy bỏ biểu mẫu đăng ký bệnh nhân mới và quay lại màn hình chính,Người dùng đang điền thông tin đăng ký bệnh nhân mới và đã nhập thông tin thay đổi,"1. Nhấp chuột vào nút Cancel ở chân trang.
+2. Hệ thống hiển thị Dialog cảnh báo Warning Cancel close.
+3. Nhấp chuột vào nút OK trên Dialog cảnh báo.",Thông tin đã nhập: First Name: Sinh, DOB: 03/01/2026,"Hệ thống đóng biểu mẫu đăng ký bệnh nhân mới, hủy bỏ toàn bộ dữ liệu đã nhập và chuyển hướng người dùng quay lại màn hình chính ER Status Board thành công.",High
