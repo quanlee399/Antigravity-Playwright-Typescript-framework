@@ -1,0 +1,219 @@
+{
+  "fetchedAt": "2026-06-09T07:41:00.429Z",
+  "mode": "jql",
+  "ticketKey": "jql_20260609_144100",
+  "total": 3,
+  "issues": [
+    {
+      "key": "SCRUM-86",
+      "id": "10085",
+      "summary": "SCRUM - 10",
+      "description": "",
+      "status": "To Do",
+      "priority": "Medium",
+      "issueType": "Test Execution",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:37:03.466+0700",
+      "updated": "2026-06-08T16:37:04.539+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-85",
+      "id": "10084",
+      "summary": "SCRUM - 10",
+      "description": "",
+      "status": "To Do",
+      "priority": "Medium",
+      "issueType": "Test Set",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:37:02.842+0700",
+      "updated": "2026-06-08T16:37:04.126+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-11",
+      "id": "10010",
+      "summary": "[Customer List & Management] US02: View and Edit Customer from List",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3,
+              "localId": "b28a1b5ba6ae"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Description:"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "As a user, I want to open a customer record from the list so that I can view or edit customer details"
+              }
+            ],
+            "attrs": {
+              "localId": "b4c4155dbd3a"
+            }
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3,
+              "localId": "14b5ff6e4745"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Acceptance criteria"
+              }
+            ]
+          },
+          {
+            "type": "orderedList",
+            "attrs": {
+              "order": 1,
+              "localId": "013d6b84d147"
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "74b85d4da2c2"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Each row in the table is clickable"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "5fa8902b4df0"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "817df7bbd69a"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Clicking the row:"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "c74e72d1bf48"
+                    }
+                  },
+                  {
+                    "type": "bulletList",
+                    "content": [
+                      {
+                        "type": "listItem",
+                        "attrs": {
+                          "localId": "ab396a2a9abd"
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Opens the customer in View mode"
+                              }
+                            ],
+                            "attrs": {
+                              "localId": "55a22b409c90"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "listItem",
+                        "attrs": {
+                          "localId": "8b54610fd316"
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "All customer details are displayed"
+                              }
+                            ],
+                            "attrs": {
+                              "localId": "bbfb4960f0c9"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "0e7890dae22e"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "dcb6631e355d"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The user can edit customer details from this screen through the pencil icon"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "aa458848ae14"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "In Progress",
+      "priority": "Medium",
+      "issueType": "Story",
+      "assignee": "Quan Le",
+      "reporter": "Hoàng Vũ Lê",
+      "created": "2026-06-05T16:30:08.147+0700",
+      "updated": "2026-06-08T16:37:11.229+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    }
+  ]
+}

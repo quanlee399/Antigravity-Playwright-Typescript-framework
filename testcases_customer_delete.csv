@@ -1,0 +1,39 @@
+TC ID,Module,Risk Level,Test Scenario,Pre-Condition,Test Steps,Test Data,Expected Result,Priority
+SCRUM_CUST_DELETE_TC_001,UI Display,High,Kiểm tra hiển thị nút Delete cho người dùng có quyền chỉnh sửa/xóa,Đăng nhập bằng tài khoản Admin (hoặc Manager có quyền xóa). Đang ở trang danh sách khách hàng.,1. Quan sát cột Action của các dòng khách hàng trong bảng.,Tài khoản: admin_user_01 (Quyền: Admin),1. Mỗi hàng khách hàng hiển thị rõ ràng nút Delete (hoặc biểu tượng thùng rác màu đỏ) tại cột Action.,High
+SCRUM_CUST_DELETE_TC_002,Security,High,Kiểm tra ẩn hoàn toàn nút Delete đối với người dùng chỉ có quyền Xem,Đăng nhập bằng tài khoản Read-only. Đang ở trang danh sách khách hàng.,1. Quan sát cột Action của các dòng khách hàng trong bảng.,Tài khoản: read_only_user_01 (Quyền: Read-only),1. Nút Delete (hoặc biểu tượng thùng rác) hoàn toàn bị ẩn đi đối với người dùng chỉ có quyền xem.,High
+SCRUM_CUST_DELETE_TC_003,Event Propagation,High,Kiểm tra click nút Delete mở Modal xác nhận và không điều hướng sang View Mode,Người dùng có quyền sửa/xóa. Đang ở trang danh sách khách hàng.,"1. Click vào nút ""Delete"" ở cột Action của khách hàng ""Acme Corporation"".","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Hệ thống chỉ hiển thị Modal xác nhận xóa.
+2. Trang không bị điều hướng sang trang View Mode chi tiết của khách hàng.",Critical
+SCRUM_CUST_DELETE_TC_004,UI Display,Medium,Kiểm tra hiển thị đầy đủ và chính xác các thành phần trên Modal xác nhận xóa,Đang hiển thị Modal xác nhận xóa.,1. Quan sát các thành phần trên Modal xác nhận.,N/A,"1. Modal hiển thị nổi bật trên màn hình nền bị làm mờ (backdrop overlay).
+2. Hiển thị đúng câu hỏi: ""Are you sure to delete this customer?"".
+3. Hiển thị đủ 2 nút lựa chọn: ""Delete"" (màu đỏ) và ""Cancel"" (màu xám).",Medium
+SCRUM_CUST_DELETE_TC_005,Modal Action,High,Kiểm tra hủy bỏ xóa bằng cách click nút Cancel trên Modal,"Đang hiển thị Modal xác nhận xóa của khách hàng ""Acme Corporation"".","1. Click nút ""Cancel"" trên Modal.
+2. Quan sát danh sách khách hàng.","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Modal xác nhận đóng lại.
+2. Khách hàng ""Acme Corporation"" vẫn tồn tại nguyên vẹn trong danh sách, không bị xóa khỏi hệ thống.",High
+SCRUM_CUST_DELETE_TC_006,Modal Action,Medium,Kiểm tra hủy bỏ xóa bằng cách click nút đóng modal (icon X),"Đang hiển thị Modal xác nhận xóa của khách hàng ""Acme Corporation"".","1. Click vào icon dấu ""X"" ở góc trên bên phải của Modal.
+2. Quan sát danh sách khách hàng.","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Modal xác nhận đóng lại.
+2. Khách hàng ""Acme Corporation"" vẫn tồn tại trong danh sách.",High
+SCRUM_CUST_DELETE_TC_007,Modal Action,Medium,Kiểm tra hủy bỏ xóa bằng cách click ra ngoài vùng Modal,"Đang hiển thị Modal xác nhận xóa của khách hàng ""Acme Corporation"".","1. Click chuột vào vùng làm mờ xung quanh (Backdrop overlay) nằm ngoài Modal.
+2. Quan sát danh sách khách hàng.","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Modal xác nhận tự động đóng lại.
+2. Khách hàng ""Acme Corporation"" không bị xóa.",Medium
+SCRUM_CUST_DELETE_TC_008,Delete Execution,High,Kiểm tra xóa thành công khách hàng hợp lệ (không có ràng buộc dữ liệu),"Đang hiển thị Modal xác nhận xóa. Khách hàng ""Acme Corporation"" không có dự án/hóa đơn liên kết nào trong hệ thống.","1. Click nút ""Delete"" trên Modal.
+2. Quan sát thông báo và danh sách.","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Modal đóng lại.
+2. Hiển thị toast message thành công: ""Customer deleted successfully"".
+3. Dòng khách hàng ""Acme Corporation"" lập tức biến mất khỏi danh sách.
+4. Tổng số bản ghi ở bộ phân trang tự động giảm đi 1.",Critical
+SCRUM_CUST_DELETE_TC_009,Data Integrity,High,Kiểm tra chặn xóa khách hàng đang có dự án hoạt động liên kết,"Đang hiển thị Modal xác nhận xóa. Khách hàng ""Acme Corporation"" đang có 2 dự án đang hoạt động.","1. Click nút ""Delete"" trên Modal.
+2. Quan sát thông báo hiển thị.","Khách hàng: ""Acme Corporation"" (ID: 101 - đang liên kết dự án)","1. Hệ thống không cho phép xóa khách hàng.
+2. Hiển thị thông báo lỗi chặn xóa: ""Cannot delete customer because they have active projects"".
+3. Khách hàng ""Acme Corporation"" vẫn tồn tại trong danh sách.",Critical
+SCRUM_CUST_DELETE_TC_010,Data Integrity,High,Kiểm tra chặn xóa khách hàng đang có hóa đơn chưa thanh toán liên kết,"Đang hiển thị Modal xác nhận xóa. Khách hàng ""Acme Corporation"" đang có hóa đơn chưa thanh toán.","1. Click nút ""Delete"" trên Modal.
+2. Quan sát thông báo hiển thị.","Khách hàng: ""Acme Corporation"" (ID: 101 - đang liên kết hóa đơn)","1. Hệ thống không cho phép xóa khách hàng.
+2. Hiển thị thông báo lỗi chặn xóa: ""Cannot delete customer because they have outstanding invoices"".
+3. Khách hàng ""Acme Corporation"" vẫn tồn tại trong danh sách.",Critical
+SCRUM_CUST_DELETE_TC_011,Pagination Edge Case,Medium,Kiểm tra tự động chuyển về trang trước khi xóa bản ghi duy nhất tại trang cuối,"Hệ thống có 11 khách hàng (Trang 1 hiển thị 10 bản ghi, Trang 2 hiển thị 1 bản ghi duy nhất là ""Global Services""). Người dùng đang ở trang 2.","1. Click nút Delete của ""Global Services"".
+2. Click nút ""Delete"" trên Modal xác nhận.","Khách hàng: ""Global Services"" (ID: 105)","1. Xóa thành công, dòng ""Global Services"" biến mất.
+2. Hệ thống tự động đưa chỉ số trang hiện tại về trang 1.
+3. Trang 1 hiển thị đầy đủ 10 bản ghi còn lại.
+4. Nút Next và Previous của phân trang đều bị vô hiệu hóa (disabled) vì chỉ còn 1 trang dữ liệu duy nhất.",High
+SCRUM_CUST_DELETE_TC_012,Concurrency,Medium,Kiểm tra ngăn chặn click đúp vào nút Delete trên modal,Đang hiển thị Modal xác nhận xóa.,"1. Click liên tục hai lần (double-click) vào nút ""Delete"" trên Modal.",N/A,"1. Nút ""Delete"" bị disable ngay sau click lần đầu tiên.
+2. Chỉ có duy nhất 1 request xóa được gửi đi lên máy chủ (tránh lỗi xung đột do gửi nhiều request).",Medium
+SCRUM_CUST_DELETE_TC_013,Security API,High,Kiểm tra chặn API gọi xóa trực tiếp từ bên ngoài cho người dùng Read-only,Người dùng đăng nhập tài khoản Read-only.,1. Sử dụng công cụ API Client (như Postman) gửi request DELETE trực tiếp đến API xóa khách hàng: `DELETE /api/customers/101`.,API Request: `DELETE /api/customers/101`,"1. Request bị chặn ở backend.
+2. Trả về mã lỗi HTTP 403 Forbidden với message: ""You do not have permission to perform this action"".",High

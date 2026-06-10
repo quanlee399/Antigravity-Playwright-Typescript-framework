@@ -1,0 +1,477 @@
+{
+  "fetchedAt": "2026-06-09T07:39:51.462Z",
+  "mode": "single",
+  "ticketKey": "SCRUM-10",
+  "total": 1,
+  "issues": [
+    {
+      "key": "SCRUM-10",
+      "id": "10009",
+      "summary": "[Customer List & Management] US01: View Customer List",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3,
+              "localId": "b28a1b5ba6ae"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Description:"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "As a user, when I need to view customer records, I want to see a list of all customers so that I can access and manage customer records."
+              }
+            ],
+            "attrs": {
+              "localId": "b4c4155dbd3a"
+            }
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3,
+              "localId": "09fba1441462"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Context"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This issue is for viewing the customer list in the Customer List & Management area."
+              }
+            ],
+            "attrs": {
+              "localId": "0fa04fab255a"
+            }
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 3,
+              "localId": "14b5ff6e4745"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Acceptance criteria"
+              }
+            ]
+          },
+          {
+            "type": "orderedList",
+            "attrs": {
+              "order": 1,
+              "localId": "90bdb5f00451"
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "f660d9875323"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A table displays the list of customers along with these attributes:"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "634be3b2ae0b"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "978cdc1d183d"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Customer Name "
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "fbcf30cfb060"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "8bd60cbd5f59"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Primary Contact"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "d534a6a9d94c"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "ae05b66b5f1d"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Phone"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "bf6bc447dfcd"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "ae05766fb3f6"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Email"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "48cdb73b8d75"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "dce35184f5ac"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Service Location (Primary Service Location)"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "2f28973b7acb"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "7dc1af830893"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "City, State"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "ea226b062918"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "3cbbad9911e0"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Status (Active / Inactive)"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "e2448534187a"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "fbd76f2345fe"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Action (Edit / Delete)"
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "d7a1e292feac"
+                    }
+                  }
+                ]
+              }
+            ],
+            "attrs": {
+              "localId": "22fd63eb93ac"
+            }
+          },
+          {
+            "type": "orderedList",
+            "attrs": {
+              "order": 2,
+              "localId": "9e65c3417d6d"
+            },
+            "content": [
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "5b40e5ada50c"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The user can sort any of the columns above."
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "028190ef9190"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "78abc5acc8d5"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Pagination is available on the list."
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "d7a1e292feac"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "e0132439c5c3"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "The user can navigate between pages."
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "c2437519dee8"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "65fe533dd6d6"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A search bar is available with placeholder: “Search by Customer Name”."
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "302cdcc04ccd"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "db3013b9ba0e"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Search filters the customer list based on Customer Name."
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "78ae4fb4e31b"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "attrs": {
+                  "localId": "f472e8e901f5"
+                },
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "A Status filter is available."
+                      }
+                    ],
+                    "attrs": {
+                      "localId": "772f2342a478"
+                    }
+                  },
+                  {
+                    "type": "orderedList",
+                    "attrs": {
+                      "order": 1,
+                      "localId": "c848c466d740"
+                    },
+                    "content": [
+                      {
+                        "type": "listItem",
+                        "attrs": {
+                          "localId": "f472e8e901f5"
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Options: Active / Inactive"
+                              }
+                            ],
+                            "attrs": {
+                              "localId": "772f2342a478"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "listItem",
+                        "attrs": {
+                          "localId": "f472e8e901f5"
+                        },
+                        "content": [
+                          {
+                            "type": "paragraph",
+                            "content": [
+                              {
+                                "type": "text",
+                                "text": "Selecting a status filters the customer list accordingly"
+                              }
+                            ],
+                            "attrs": {
+                              "localId": "772f2342a478"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "In Progress",
+      "priority": "Medium",
+      "issueType": "Story",
+      "assignee": "Quan Le",
+      "reporter": "Hoàng Vũ Lê",
+      "created": "2026-06-05T16:20:46.851+0700",
+      "updated": "2026-06-08T16:37:04.521+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": [
+        {
+          "id": 2,
+          "name": "SCRUM Sprint 0",
+          "state": "active",
+          "boardId": 1,
+          "startDate": "2026-06-05T08:58:29.156Z",
+          "endDate": "2026-06-19T08:58:29.156Z"
+        }
+      ],
+      "attachments": []
+    }
+  ]
+}

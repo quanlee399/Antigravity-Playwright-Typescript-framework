@@ -1,0 +1,1144 @@
+{
+  "fetchedAt": "2026-06-09T07:41:29.914Z",
+  "mode": "jql",
+  "ticketKey": "jql_20260609_144129",
+  "total": 8,
+  "issues": [
+    {
+      "key": "SCRUM-20",
+      "id": "10019",
+      "summary": "[SCRUM_CUSTOMER_TC_008] Kiểm tra an toàn bảo mật (XSS Injection) trên ô tìm kiếm.",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Search Bar"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Medium"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Đang ở trang danh sách khách hàng."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "High",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:04:03.138+0700",
+      "updated": "2026-06-08T16:19:47.186+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-19",
+      "id": "10018",
+      "summary": "[SCRUM_CUSTOMER_TC_007] Kiểm tra an toàn bảo mật (SQL Injection) trên ô tìm kiếm.",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Search Bar"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Medium"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Đang ở trang danh sách khách hàng."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "High",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:03:59.213+0700",
+      "updated": "2026-06-08T16:19:47.851+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-18",
+      "id": "10017",
+      "summary": "[SCRUM_CUSTOMER_TC_006] Tìm kiếm với từ khóa không tồn tại trên hệ thống.",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Search Bar"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Medium"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Đang ở trang danh sách khách hàng."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "High",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:03:54.542+0700",
+      "updated": "2026-06-08T16:19:48.499+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-17",
+      "id": "10016",
+      "summary": "[SCRUM_CUSTOMER_TC_005] Tìm kiếm khách hàng bằng một phần tên (Partial Match) và không phân biệt chữ hoa/thường.",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Search Bar"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Medium"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Hệ thống có sẵn các khách hàng tên \"DataHouse Asia\", \"datahouse technology\", \"Big House\"."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "High",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:03:49.914+0700",
+      "updated": "2026-06-08T16:19:49.417+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-16",
+      "id": "10015",
+      "summary": "[SCRUM_CUSTOMER_TC_004] Tìm kiếm khách hàng bằng tên khớp hoàn toàn (Exact Match).",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Search Bar"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Medium"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Critical"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Hệ thống có sẵn khách hàng tên \"Acme Corporation\"."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "Highest",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:03:44.866+0700",
+      "updated": "2026-06-08T16:19:50.028+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-15",
+      "id": "10014",
+      "summary": "[SCRUM_CUSTOMER_TC_003] Kiểm tra sắp xếp (Sorting) giảm dần cho cột Customer Name.",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Customer Data Table"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Đang ở trang danh sách khách hàng. Tiêu đề cột \"Customer Name\" đang sắp xếp tăng dần."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "High",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:03:40.590+0700",
+      "updated": "2026-06-08T16:19:50.639+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-14",
+      "id": "10013",
+      "summary": "[SCRUM_CUSTOMER_TC_002] Kiểm tra sắp xếp (Sorting) tăng dần cho cột Customer Name.",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Customer Data Table"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Có sẵn dữ liệu khách hàng trong hệ thống. Đang ở trang danh sách khách hàng."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "High",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:03:33.920+0700",
+      "updated": "2026-06-08T16:19:51.282+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    },
+    {
+      "key": "SCRUM-13",
+      "id": "10012",
+      "summary": "[SCRUM_CUSTOMER_TC_001] Kiểm tra hiển thị giao diện bảng danh sách khách hàng mặc định khi truy cập lần đầu.",
+      "description": {
+        "type": "doc",
+        "version": 1,
+        "content": [
+          {
+            "type": "bulletList",
+            "content": [
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Module:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Customer Data Table"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Risk Level:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* High"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Priority:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "* Critical"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "listItem",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Pre-Condition:",
+                        "marks": [
+                          {
+                            "type": "strong"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "*"
+                      },
+                      {
+                        "type": "hardBreak"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Có sẵn ít nhất 15 khách hàng trong hệ thống. Người dùng đã đăng nhập và có quyền xem danh sách khách hàng."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "status": "To Do",
+      "priority": "Highest",
+      "issueType": "Test",
+      "assignee": "Quan Le",
+      "reporter": "Quan Le",
+      "created": "2026-06-08T16:03:28.466+0700",
+      "updated": "2026-06-08T16:19:51.973+0700",
+      "labels": [],
+      "components": [],
+      "acceptanceCriteria": "",
+      "attachments": []
+    }
+  ]
+}

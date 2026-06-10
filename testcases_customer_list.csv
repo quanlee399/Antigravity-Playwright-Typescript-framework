@@ -1,0 +1,67 @@
+TC ID,Module,Risk Level,Test Scenario,Pre-Condition,Test Steps,Test Data,Expected Result,Priority
+SCRUM_CUSTOMER_TC_001,Customer Data Table,High,Kiểm tra hiển thị giao diện bảng danh sách khách hàng mặc định khi truy cập lần đầu.,Có sẵn ít nhất 15 khách hàng trong hệ thống. Người dùng đã đăng nhập và có quyền xem danh sách khách hàng.,"1. Truy cập vào màn hình ""Customer List & Management"".
+2. Quan sát giao diện bảng hiển thị dữ liệu.",N/A,"1. Bảng hiển thị đầy đủ 8 cột: Customer Name, Primary Contact, Phone, Email, Service Location, City, State, Status, Action.
+2. Cột Action chứa 2 nút Edit và Delete.
+3. Dữ liệu mặc định sắp xếp theo cột Customer Name tăng dần (A-Z).
+4. Hiển thị đúng 10 bản ghi đầu tiên.
+5. Cấu phần phân trang hiển thị phía dưới bảng.",Critical
+SCRUM_CUSTOMER_TC_002,Customer Data Table,High,Kiểm tra sắp xếp (Sorting) tăng dần cho cột Customer Name.,Có sẵn dữ liệu khách hàng trong hệ thống. Đang ở trang danh sách khách hàng.,"1. Click vào tiêu đề cột ""Customer Name"" lần đầu tiên.
+2. Quan sát thứ tự hiển thị của các bản ghi khách hàng.",N/A,"1. Tiêu đề cột ""Customer Name"" hiển thị icon sắp xếp tăng dần (mũi tên hướng lên).
+2. Danh sách khách hàng được sắp xếp theo thứ tự bảng chữ cái A-Z của trường Customer Name.",High
+SCRUM_CUSTOMER_TC_003,Customer Data Table,High,Kiểm tra sắp xếp (Sorting) giảm dần cho cột Customer Name.,"Đang ở trang danh sách khách hàng. Tiêu đề cột ""Customer Name"" đang sắp xếp tăng dần.","1. Click vào tiêu đề cột ""Customer Name"" thêm một lần nữa.
+2. Quan sát thứ tự hiển thị của các bản ghi khách hàng.",N/A,"1. Tiêu đề cột ""Customer Name"" hiển thị icon sắp xếp giảm dần (mũi tên hướng xuống).
+2. Danh sách khách hàng được sắp xếp theo thứ tự ngược bảng chữ cái Z-A của trường Customer Name.",High
+SCRUM_CUSTOMER_TC_004,Search Bar,Medium,Tìm kiếm khách hàng bằng tên khớp hoàn toàn (Exact Match).,"Hệ thống có sẵn khách hàng tên ""Acme Corporation"".","1. Nhập vào ô tìm kiếm: ""Acme Corporation""
+2. Chờ 300ms và quan sát kết quả tự động hiển thị trên bảng.","Search keyword: ""Acme Corporation""","1. Bảng chỉ hiển thị các dòng khách hàng có tên chính xác là ""Acme Corporation"".
+2. Bộ phân trang cập nhật lại tổng số bản ghi và tổng số trang tương ứng.",Critical
+SCRUM_CUSTOMER_TC_005,Search Bar,Medium,Tìm kiếm khách hàng bằng một phần tên (Partial Match) và không phân biệt chữ hoa/thường.,"Hệ thống có sẵn các khách hàng tên ""DataHouse Asia"", ""datahouse technology"", ""Big House"".","1. Nhập vào ô tìm kiếm: ""house""
+2. Chờ 300ms và quan sát danh sách kết quả hiển thị trên bảng.","Search keyword: ""house""","1. Bảng hiển thị tất cả các khách hàng có tên chứa từ ""house"" (không phân biệt chữ hoa thường), bao gồm: ""DataHouse Asia"", ""datahouse technology"", ""Big House"".",High
+SCRUM_CUSTOMER_TC_006,Search Bar,Medium,Tìm kiếm với từ khóa không tồn tại trên hệ thống.,Đang ở trang danh sách khách hàng.,"1. Nhập vào ô tìm kiếm: ""InvalidCustomerName123""
+2. Chờ 300ms và quan sát kết quả hiển thị.","Search keyword: ""InvalidCustomerName123""","1. Bảng không hiển thị dòng khách hàng nào.
+2. Bảng hiển thị thông báo trống: ""No matching records found"" (hoặc tương đương).
+3. Cấu phần phân trang hiển thị 0/0 trang hoặc ẩn.",High
+SCRUM_CUSTOMER_TC_007,Search Bar,Medium,Kiểm tra an toàn bảo mật (SQL Injection) trên ô tìm kiếm.,Đang ở trang danh sách khách hàng.,"1. Nhập vào ô tìm kiếm chuỗi SQL Injection: ""' OR 1=1--""
+2. Chờ 300ms và quan sát phản hồi của hệ thống.","Search keyword: ""' OR 1=1--""","1. Hệ thống không bị crash hoặc lỗi cơ sở dữ liệu.
+2. Hệ thống xử lý chuỗi nhập vào như một chuỗi văn bản thông thường và hiển thị thông báo không tìm thấy kết quả.",High
+SCRUM_CUSTOMER_TC_008,Search Bar,Medium,Kiểm tra an toàn bảo mật (XSS Injection) trên ô tìm kiếm.,Đang ở trang danh sách khách hàng.,"1. Nhập vào ô tìm kiếm chuỗi mã độc XSS: ""<script>alert('xss')</script>""
+2. Chờ 300ms và quan sát phản hồi của hệ thống.","Search keyword: ""<script>alert('xss')</script>""","1. Không có popup alert nào hiển thị.
+2. Hệ thống escape chuỗi đầu vào an toàn và hiển thị thông báo không tìm thấy kết quả.",High
+SCRUM_CUSTOMER_TC_009,Status Filter,Medium,"Lọc danh sách khách hàng theo trạng thái ""Active"".",Hệ thống có cả khách hàng Active và Inactive.,"1. Click chọn bộ lọc trạng thái (Status Filter).
+2. Chọn tùy chọn ""Active"".
+3. Quan sát cột Status của các khách hàng hiển thị trong bảng.","Filter: ""Active""","1. Bảng chỉ hiển thị các khách hàng có trạng thái là ""Active"".
+2. Không hiển thị bất kỳ khách hàng nào có trạng thái ""Inactive"".",High
+SCRUM_CUSTOMER_TC_010,Status Filter,Medium,"Lọc danh sách khách hàng theo trạng thái ""Inactive"".",Hệ thống có cả khách hàng Active và Inactive.,"1. Click chọn bộ lọc trạng thái (Status Filter).
+2. Chọn tùy chọn ""Inactive"".
+3. Quan sát cột Status của các khách hàng hiển thị trong bảng.","Filter: ""Inactive""","1. Bảng chỉ hiển thị các khách hàng có trạng thái là ""Inactive"".
+2. Không hiển thị bất kỳ khách hàng nào có trạng thái ""Active"".",High
+SCRUM_CUSTOMER_TC_011,Status Filter & Search Bar,Medium,Lọc kết hợp đa điều kiện (Tìm kiếm + Lọc trạng thái).,"Hệ thống có khách hàng ""Acme Corporation"" (Active) và ""Acme Services"" (Inactive).","1. Nhập vào ô tìm kiếm: ""Acme""
+2. Chọn bộ lọc trạng thái: ""Active""
+3. Quan sát kết quả.","Search: ""Acme"", Filter: ""Active""","1. Bảng chỉ hiển thị khách hàng thỏa mãn cả hai điều kiện: Tên chứa ""Acme"" và trạng thái là ""Active"" (ở đây hiển thị ""Acme Corporation"").
+2. Khách hàng ""Acme Services"" (Inactive) không được hiển thị.",High
+SCRUM_CUSTOMER_TC_012,Pagination Control,Medium,Chuyển sang trang tiếp theo (Next Page) và quay lại trang trước (Previous Page).,"Hệ thống có ít nhất 15 khách hàng (tương đương 2 trang dữ liệu, mỗi trang 10 bản ghi). Đang ở trang 1.","1. Click vào nút ""Next"" trên bộ phân trang.
+2. Quan sát dữ liệu bảng hiển thị và số trang hiện tại.
+3. Click vào nút ""Previous"" trên bộ phân trang.
+4. Quan sát dữ liệu hiển thị.",N/A,"1. Khi click Next: Dữ liệu bảng cập nhật hiển thị các khách hàng từ số 11 đến 15. Bộ phân trang cập nhật chỉ số trang hiện tại là trang 2.
+2. Khi click Previous: Dữ liệu bảng quay lại hiển thị các khách hàng từ số 1 đến 10. Chỉ số trang hiện tại quay lại là trang 1.",High
+SCRUM_CUSTOMER_TC_013,Pagination Control,Medium,Kiểm tra vô hiệu hóa nút chuyển trang tại các giá trị biên phân trang.,Hệ thống có 15 khách hàng (2 trang).,"1. Khi đang ở trang 1, quan sát trạng thái của nút ""Previous"".
+2. Click chuyển sang trang 2 (trang cuối).
+3. Quan sát trạng thái của nút ""Next"".",N/A,"1. Ở trang 1: Nút ""Previous"" ở trạng thái vô hiệu hóa (disabled), không thể click được.
+2. Ở trang 2: Nút ""Next"" ở trạng thái vô hiệu hóa (disabled), không thể click được.",Medium
+SCRUM_CUSTOMER_TC_014,Pagination Control,Medium,Phân trang tự động cập nhật và đưa về trang 1 khi thay đổi điều kiện tìm kiếm.,Đang ở trang 2 của danh sách khách hàng ban đầu.,"1. Nhập vào ô tìm kiếm từ khóa: ""Acme"" (thỏa mãn tìm được 3 bản ghi trên hệ thống).
+2. Quan sát số trang hiện tại và cấu phần phân trang.","Search keyword: ""Acme""","1. Dữ liệu bảng tự động cập nhật hiển thị kết quả lọc của từ khóa ""Acme"".
+2. Bộ phân trang tự động đưa chỉ số trang hiện tại quay về trang 1.
+3. Tổng số trang được tính toán lại chỉ còn 1 trang. Nút Next và Previous đều bị disable.",High
+SCRUM_CUSTOMER_TC_015,Inline Actions,Medium,Click nút Edit trên một dòng khách hàng.,Có ít nhất một dòng khách hàng hiển thị trên bảng.,"1. Click vào nút ""Edit"" trên dòng của khách hàng ""Acme Corporation"" (ID: 101).
+2. Quan sát sự thay đổi giao diện.","Khách hàng chọn: ""Acme Corporation"" (ID: 101)",1. Hệ thống điều hướng thành công sang trang chỉnh sửa khách hàng tại URL tương ứng (ví dụ: /customers/edit/101 hoặc /customers/101/edit).,High
+SCRUM_CUSTOMER_TC_016,Inline Actions,Medium,Click nút Delete trên một dòng khách hàng và xác nhận hủy xóa.,Có ít nhất một dòng khách hàng hiển thị trên bảng.,"1. Click vào nút ""Delete"" trên dòng của khách hàng ""Acme Corporation"" (ID: 101).
+2. Quan sát sự hiển thị của Modal xác nhận.
+3. Click vào nút ""Cancel"" trên Modal xác nhận.
+4. Quan sát dòng khách hàng trên bảng dữ liệu.","Khách hàng chọn: ""Acme Corporation"" (ID: 101)","1. Modal xác nhận hiển thị với câu hỏi: ""Are you sure you want to delete this customer?"".
+2. Khi click Cancel: Modal xác nhận đóng lại, dòng khách hàng ""Acme Corporation"" vẫn tồn tại nguyên vẹn trên bảng dữ liệu (không bị xóa).",High
+SCRUM_CUSTOMER_TC_017,Customer Data Table,High,Kiểm tra hiển thị text overflow cho trường có độ dài ký tự cực lớn.,Có khách hàng có Tên rất dài hoặc Địa điểm dịch vụ rất dài trong database.,"1. Quan sát dòng khách hàng có trường độ dài lớn trên bảng.
+2. Hover chuột vào trường văn bản bị cắt ngắn.","Khách hàng: ""Super Long Name Corporation International Holding Limited Group of Companies""","1. Văn bản quá dài bị cắt ngắn và hiển thị dấu ba chấm ""..."" để không làm vỡ giao diện bảng.
+2. Khi hover chuột vào, một tooltip hiển thị đầy đủ tên khách hàng.",Medium
+SCRUM_CUSTOMER_TC_018,Customer Data Table,Low,Kiểm tra hiển thị danh sách khi hệ thống không có dữ liệu khách hàng nào (Empty State).,Cơ sở dữ liệu của hệ thống trống (không có bất kỳ bản ghi khách hàng nào).,"1. Truy cập vào màn hình ""Customer List & Management"".
+2. Quan sát bảng hiển thị.",N/A,"1. Bảng dữ liệu không hiển thị dòng khách hàng nào.
+2. Hiển thị thông báo ở giữa bảng: ""No customers found"" hoặc ""No data available"".
+3. Cấu phần phân trang ẩn hoặc hiển thị ""Showing 0 to 0 of 0 entries"".",Medium

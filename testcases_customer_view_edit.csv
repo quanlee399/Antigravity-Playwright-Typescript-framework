@@ -1,0 +1,90 @@
+TC ID,Module,Risk Level,Test Scenario,Pre-Condition,Test Steps,Test Data,Expected Result,Priority
+SCRUM_CUST_VIEW_EDIT_TC_001,Table Interaction,High,Kiểm tra hover chuột và click vào dòng khách hàng để mở View Mode,Có sẵn ít nhất 1 khách hàng trong hệ thống. Người dùng đã đăng nhập và đang ở trang danh sách khách hàng.,"1. Di chuột (hover) qua dòng của khách hàng ""Acme Corporation"".
+2. Nhấp chuột vào dòng này (ở cột tên khách hàng).","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Khi hover: Con trỏ chuột đổi sang dạng bàn tay (`cursor: pointer`), dòng khách hàng được highlight nhẹ màu nền.
+2. Khi click: Hệ thống điều hướng thành công sang trang xem chi tiết tại URL `/customers/view/101`.",Critical
+SCRUM_CUST_VIEW_EDIT_TC_002,Table Interaction,Medium,Kiểm tra click nút Edit ở cột Action không mở trang View Mode,Có sẵn danh sách khách hàng.,"1. Nhấp chuột vào nút ""Edit"" ở cột Action của khách hàng ""Acme Corporation"".","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Hệ thống điều hướng người dùng thẳng tới trang chỉnh sửa khách hàng (`/customers/101/edit`).
+2. Không điều hướng sang trang View Mode (`/customers/view/101`).",High
+SCRUM_CUST_VIEW_EDIT_TC_003,Table Interaction,Medium,Kiểm tra click nút Delete ở cột Action không mở trang View Mode,Có sẵn danh sách khách hàng.,"1. Nhấp chuột vào nút ""Delete"" ở cột Action của khách hàng ""Acme Corporation"".","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Hệ thống hiển thị Modal xác nhận xóa khách hàng.
+2. Trang View Mode của khách hàng không bị mở ra bên dưới.",High
+SCRUM_CUST_VIEW_EDIT_TC_004,Detail Display,High,Kiểm tra hiển thị đầy đủ thông tin khách hàng ở trạng thái Read-only tại View Mode,"Đã click vào dòng khách hàng ""Acme Corporation"" và đang ở trang View Mode.",1. Quan sát giao diện trang xem chi tiết khách hàng.,"Dữ liệu khách hàng trong DB:
+- Name: ""Acme Corporation""
+- Contact: ""John Doe""
+- Phone: ""0912345678""
+- Email: ""john.doe@acme.com""
+- Location: ""123 Main St""
+- City: ""Da Nang""
+- State: ""Hai Chau""
+- Status: ""Active""","1. Trang hiển thị đầy đủ 7 trường thông tin: Customer Name, Primary Contact, Phone, Email, Service Location, City, State, Status.
+2. Dữ liệu khớp chính xác với DB.
+3. Tất cả các trường thông tin hiển thị dưới dạng văn bản tĩnh (Read-only), không thể gõ hay chỉnh sửa.",Critical
+SCRUM_CUST_VIEW_EDIT_TC_005,Authorization,High,Kiểm tra hiển thị Pencil Icon cho người dùng có quyền chỉnh sửa,Đăng nhập bằng tài khoản Admin (hoặc Manager có quyền sửa).,"1. Truy cập vào trang View Mode của khách hàng ""Acme Corporation"".
+2. Quan sát sự xuất hiện của pencil icon.",Tài khoản: admin_user_01 (Quyền: Admin),1. Biểu tượng chiếc bút chì (pencil icon) hiển thị rõ ràng tại góc trên bên phải hoặc bên cạnh tên khách hàng.,High
+SCRUM_CUST_VIEW_EDIT_TC_006,Authorization,High,Kiểm tra ẩn Pencil Icon cho người dùng chỉ có quyền Xem (Read-only),Đăng nhập bằng tài khoản Read-only.,"1. Truy cập vào trang View Mode của khách hàng ""Acme Corporation"".
+2. Quan sát sự xuất hiện của pencil icon.",Tài khoản: read_only_user_01 (Quyền: Read-only),1. Biểu tượng chiếc bút chì (pencil icon) hoàn toàn bị ẩn đi hoặc không hiển thị trên giao diện.,High
+SCRUM_CUST_VIEW_EDIT_TC_007,Mode Transition,High,Kiểm tra kích hoạt chế độ chỉnh sửa trực tiếp khi click Pencil Icon,Đăng nhập tài khoản Admin và đang ở trang View Mode của khách hàng.,"1. Click vào biểu tượng chiếc bút chì (pencil icon).
+2. Quan sát sự thay đổi trên giao diện.","Khách hàng: ""Acme Corporation"" (ID: 101)","1. Giao diện chuyển sang chế độ chỉnh sửa (Inline Editing).
+2. Các trường thông tin tĩnh chuyển thành form nhập liệu (input box, select box).
+3. Pencil icon ẩn đi.
+4. Nút ""Save"" và ""Cancel"" xuất hiện rõ ràng.",Critical
+SCRUM_CUST_VIEW_EDIT_TC_008,Inline Edit,High,Kiểm tra chỉnh sửa thông tin khách hàng hợp lệ và click Save thành công,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Nhập Tên mới: ""Acme Corporation Group""
+2. Nhập Email mới: ""contact@acmegroup.com""
+3. Click nút ""Save"".","Dữ liệu nhập:
+- Name: ""Acme Corporation Group""
+- Email: ""contact@acmegroup.com""","1. Hệ thống hiển thị toast message: ""Customer updated successfully"".
+2. Giao diện tự động chuyển về View Mode (Read-only).
+3. Dữ liệu mới được cập nhật hiển thị chính xác: Name là ""Acme Corporation Group"", Email là ""contact@acmegroup.com"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_009,Inline Edit,High,Kiểm tra chỉnh sửa thông tin khách hàng và click Cancel,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Thay đổi trường Primary Contact thành ""Jane Doe"".
+2. Click nút ""Cancel"".","Thay đổi: ""Jane Doe""","1. UI quay về View Mode (Read-only).
+2. Dữ liệu cũ được khôi phục, không có thay đổi nào được lưu (Primary Contact vẫn là ""John Doe"").",High
+SCRUM_CUST_VIEW_EDIT_TC_010,Inline Edit,Medium,Kiểm tra Dirty check khi thoát trang khi có thay đổi chưa lưu,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng và đã thay đổi dữ liệu.,"1. Nhập thay đổi vào trường Phone: ""0999888777"".
+2. Click nút điều hướng ""Back to List"" trên menu hoặc nút back của trình duyệt.","Nhập Phone: ""0999888777""","1. Hệ thống hiển thị Modal cảnh báo: ""You have unsaved changes. Are you sure you want to leave?"".
+2. Click ""Stay"": Modal đóng, người dùng vẫn ở trang Edit.
+3. Click ""Leave"": Hệ thống quay về danh sách, dữ liệu cũ giữ nguyên.",Medium
+SCRUM_CUST_VIEW_EDIT_TC_011,Field Validation,High,Kiểm tra validation bỏ trống trường bắt buộc Customer Name,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Xóa toàn bộ nội dung trong trường Customer Name.
+2. Click nút ""Save"".","Nhập Customer Name: """" (rỗng)","1. Hệ thống không cho phép lưu.
+2. Hiển thị thông báo lỗi dưới trường Customer Name: ""Customer Name is required"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_012,Field Validation,High,Kiểm tra an toàn bảo mật (XSS Injection) trên trường Customer Name,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Nhập mã độc XSS vào trường Customer Name.
+2. Click nút ""Save"".",Nhập: `<script>alert('XSS')</script>`,"1. Hệ thống escape chuỗi đầu vào an toàn.
+2. Dữ liệu được lưu dưới dạng chuỗi văn bản thường.
+3. Không có popup alert nào hiển thị khi quay về View Mode.",High
+SCRUM_CUST_VIEW_EDIT_TC_013,Field Validation,High,Kiểm tra an toàn bảo mật (SQL Injection) trên trường Customer Name,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Nhập chuỗi SQL Injection vào trường Customer Name.
+2. Click nút ""Save"".",Nhập: `' OR 1=1--`,"1. Hệ thống xử lý chuỗi nhập vào như một chuỗi văn bản thông thường.
+2. Không gây crash hay lỗi hệ thống cơ sở dữ liệu.",High
+SCRUM_CUST_VIEW_EDIT_TC_014,Field Validation,High,Kiểm tra validation bỏ trống trường bắt buộc Primary Contact,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Xóa toàn bộ nội dung trong trường Primary Contact.
+2. Click nút ""Save"".","Nhập Primary Contact: """" (rỗng)","1. Hệ thống không cho phép lưu.
+2. Hiển thị thông báo lỗi dưới trường Primary Contact: ""Primary Contact is required"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_015,Field Validation,High,Kiểm tra validation bỏ trống trường bắt buộc Phone,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Xóa toàn bộ nội dung trong trường Phone.
+2. Click nút ""Save"".","Nhập Phone: """" (rỗng)","1. Hệ thống không cho phép lưu.
+2. Hiển thị thông báo lỗi dưới trường Phone: ""Phone number is required"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_016,Field Validation,High,Kiểm tra validation trường Phone chứa ký tự chữ cái,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Nhập số điện thoại chứa chữ cái vào trường Phone.
+2. Quan sát giá trị lưu trữ hoặc click ""Save"".","Nhập Phone: ""0912abc345""","1. Hệ thống tự động loại bỏ chữ cái hoặc hiển thị lỗi: ""Phone number must contain numbers only"".",High
+SCRUM_CUST_VIEW_EDIT_TC_017,Field Validation,Medium,Kiểm tra validation trường Phone quá ngắn (dưới 8 chữ số),Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Nhập 7 chữ số vào trường Phone.
+2. Click nút ""Save"".","Nhập Phone: ""0123456""","1. Hệ thống chặn lưu và hiển thị thông báo lỗi dưới trường Phone: ""Phone number must be at least 8 digits"".",High
+SCRUM_CUST_VIEW_EDIT_TC_018,Field Validation,Medium,Kiểm tra validation trường Phone quá dài (trên 15 chữ số),Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Nhập 16 chữ số vào trường Phone.
+2. Click nút ""Save"".","Nhập Phone: ""1234567890123456""","1. Hệ thống chặn lưu và hiển thị thông báo lỗi dưới trường Phone: ""Phone number cannot exceed 15 digits"".",High
+SCRUM_CUST_VIEW_EDIT_TC_019,Field Validation,High,Kiểm tra validation bỏ trống trường bắt buộc Email,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Xóa toàn bộ nội dung trong trường Email.
+2. Click nút ""Save"".","Nhập Email: """" (rỗng)","1. Hệ thống không cho phép lưu.
+2. Hiển thị thông báo lỗi dưới trường Email: ""Email is required"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_020,Field Validation,High,Kiểm tra validation trường Email sai định dạng,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Nhập chuỗi email thiếu kí tự @ và domain.
+2. Click nút ""Save"".","Nhập Email: ""contact_acmegroup.com""","1. Hệ thống chặn lưu và hiển thị lỗi: ""Invalid email format"".",High
+SCRUM_CUST_VIEW_EDIT_TC_021,Field Validation,High,Kiểm tra validation trường Email đã tồn tại (Unique check),"Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng. Hệ thống có sẵn khách hàng khác sử dụng email ""existing@customer.com"".","1. Nhập email trùng lặp vào trường Email.
+2. Click nút ""Save"".","Nhập Email: ""existing@customer.com""","1. Hệ thống chặn lưu.
+2. Hiển thị thông báo lỗi: ""Email already exists in the system"".",High
+SCRUM_CUST_VIEW_EDIT_TC_022,Field Validation,High,Kiểm tra validation bỏ trống trường bắt buộc Service Location,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Xóa toàn bộ nội dung trong trường Service Location.
+2. Click nút ""Save"".","Nhập Service Location: """" (rỗng)","1. Hệ thống không cho phép lưu.
+2. Hiển thị thông báo lỗi: ""Service Location is required"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_023,Field Validation,High,Kiểm tra validation bỏ trống trường bắt buộc City,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Xóa toàn bộ nội dung trong trường City.
+2. Click nút ""Save"".","Nhập City: """" (rỗng)","1. Hệ thống không cho phép lưu.
+2. Hiển thị thông báo lỗi: ""City is required"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_024,Field Validation,High,Kiểm tra validation bỏ trống trường bắt buộc State,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Xóa toàn bộ nội dung trong trường State.
+2. Click nút ""Save"".","Nhập State: """" (rỗng)","1. Hệ thống không cho phép lưu.
+2. Hiển thị thông báo lỗi: ""State is required"".",Critical
+SCRUM_CUST_VIEW_EDIT_TC_025,State Transition,Medium,Kiểm tra cập nhật trường Status từ Active sang Inactive và ngược lại,Đang ở chế độ chỉnh sửa (Inline Editing) của khách hàng.,"1. Chọn trạng thái trong dropdown Status: ""Inactive"".
+2. Click nút ""Save"".
+3. Click Pencil icon lần nữa.
+4. Chọn trạng thái trong dropdown Status: ""Active"".
+5. Click nút ""Save"".","Dropdown Status: ""Inactive"" / ""Active""","1. Bước 2: Dữ liệu được lưu thành công, trạng thái khách hàng chuyển thành ""Inactive"" hiển thị tĩnh trên màn hình View Mode.
+2. Bước 5: Dữ liệu lưu thành công, trạng thái quay lại là ""Active"".",High
+SCRUM_CUST_VIEW_EDIT_TC_026,Detail Display,Low,Kiểm tra hiển thị dấu ba chấm (...) và tooltip cho các trường thông tin có độ dài cực lớn,Hệ thống có sẵn khách hàng có thông tin rất dài.,"1. Mở trang View Mode của khách hàng này.
+2. Hover chuột vào trường Service Location bị cắt ngắn.","Service Location: ""123 Main Street Suite 450 Floor 10 Room 12B, Central Business District Phase 2, Da Nang City, Vietnam""","1. Văn bản quá dài được hiển thị dưới dạng cắt ngắn và kết thúc bằng dấu ba chấm ""..."".
+2. Hover chuột hiển thị tooltip chứa đầy đủ văn bản của Service Location.",Medium
